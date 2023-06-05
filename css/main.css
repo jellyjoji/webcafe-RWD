@@ -5,3 +5,34 @@
 @import url(./base.css);
 
 /* 웹카페 반응형 스타일 */
+header {
+  background-color: yellow;
+  width: 800px;
+  height: 300px;
+  border: 10px blue solid;
+  padding: 20px;
+  margin: 0 0 0 auto;
+}
+nav {
+  background-color: pink;
+}
+main {
+  background-color: lime;
+  width: 800px;
+}
+
+section {
+  border: 5px solid red;
+}
+
+h1 {
+  background-color: salmon;
+  display: inline;
+  border: 5px dashed blue;
+  padding: 50px 30px;
+  margin: 50px;
+}
+
+footer {
+  background-color: skyblue;
+}
