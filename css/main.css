@@ -29,18 +29,31 @@
   padding-left: 0;
   list-style: none;
   /* display: flow-root; */
-  float: right;
+  /* overflow: hidden; */
+  /* float: right; */
+}
+
+.memberOnly::after {
+  content: "";
+  display: block;
+  clear: both;
 }
 
 .memberOnly li:first-child {
-  /* background-color: yellowgreen; */
+  background-color: yellowgreen;
   float: left;
+  height: 100px;
 }
 .memberOnly li:nth-child(2) {
-  /* background-color: salmon; */
+  background-color: salmon;
   float: left;
 }
 .memberOnly li:last-child {
-  /* background-color: aqua; */
+  background-color: aqua;
   float: left;
+}
+
+.box {
+  background-color: gray;
+  /* clear: both; */
 }
