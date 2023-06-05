@@ -4,6 +4,13 @@
 @import url(./theme.css);
 @import url(./base.css);
 
+body {
+  background: url(./../images/sun.png) no-repeat 200px 0 /100px 100px,
+  url(./../images/cloud.png) no-repeat 100px 50px /250px 150px,
+ url(./../images/tree.png) no-repeat 0 0 /300px 400px, pink;
+
+}
+
 /* 웹카페 반응형 스타일 */
 .appHeader {
   background-color: yellow;
@@ -11,10 +18,10 @@
 
 /* 공통 스타일 */
 /* 공통 로고 */
-.logo {
+/* .logo {
   background-color: pink;
   width: 6.75rem; /* 204px */
-  height: 1.75rem; /* 60px */
+  height: 3.75rem; /* 60px */
 }
 
 .logo__link {
@@ -25,4 +32,5 @@
   background-image: url(./../images/webcafe-logo.png);
   background-repeat: no-repeat;
   background-position: 50% 50%;
-}
+  background-size: cover;
+} */
