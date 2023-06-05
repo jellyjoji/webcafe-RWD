@@ -28,12 +28,19 @@
   background-color: violet;
   padding-left: 0;
   list-style: none;
-  text-align: right;
-  font-size: 0;
+  /* display: flow-root; */
+  float: right;
 }
 
-.memberOnly li {
-  background-color: yellowgreen;
-  display: inline;
-  font-size: 1.6rem;
+.memberOnly li:first-child {
+  /* background-color: yellowgreen; */
+  float: left;
+}
+.memberOnly li:nth-child(2) {
+  /* background-color: salmon; */
+  float: left;
+}
+.memberOnly li:last-child {
+  /* background-color: aqua; */
+  float: left;
 }
