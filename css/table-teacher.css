@@ -1,0 +1,16 @@
+@import url(./a11y.css);
+@import url(./base.css);
+
+/* 교육과정 정보 테이블 */
+.lecture__table {
+  /* background: yellow; */
+  width: 50%;
+  margin: 3rem;
+}
+
+.lecture__table caption {
+  font-size: 2rem;
+  font-weight: 700;
+  /* background-color: pink; */
+  text-align: left;
+}
