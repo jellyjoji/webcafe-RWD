@@ -36,6 +36,12 @@
 }
 
 /* 공통 검색 폼 */
+
+input[type="search"] {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
 .formInput__input {
   border: 1px solid var(--border-color);
   border-radius: 0.25rem;
