@@ -12,6 +12,7 @@
 /* 공통 스타일 */
 /* 공통 로고 */
 .logo {
+  background-color: yellowgreen;
   width: 12.75rem; /* 204px */
   height: 3.75rem; /* 60px */
 }
@@ -42,9 +43,38 @@ input[type="search"] {
   appearance: none;
 }
 
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.button {
+  cursor: pointer;
+  border: 0;
+  border-radius: 0.25rem;
+  height: 2rem;
+  padding: 0.125rem 0.75rem;
+  background: transparent;
+}
+
+.button--fillSecondary {
+  color: var(--white);
+  background: var(--secondary-color);
+}
+
+.button--outlineSecondary {
+  color: var(--secondary-color);
+  border: 1px solid currentColor;
+}
+
 .formInput__input {
   border: 1px solid var(--border-color);
   border-radius: 0.25rem;
   height: 2rem;
   padding: 0.125rem 0.75rem;
+}
+
+.searchForm__group {
+  background-color: skyblue;
 }
