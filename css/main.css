@@ -28,32 +28,9 @@
   background-color: violet;
   padding-left: 0;
   list-style: none;
-  /* display: flow-root; */
-  /* overflow: hidden; */
-  /* float: right; */
+  display: flow-root;
 }
 
-.memberOnly::after {
-  content: "";
-  display: block;
-  clear: both;
-}
-
-.memberOnly li:first-child {
-  background-color: yellowgreen;
+.memberOnly li {
   float: left;
-  height: 100px;
-}
-.memberOnly li:nth-child(2) {
-  background-color: salmon;
-  float: left;
-}
-.memberOnly li:last-child {
-  background-color: aqua;
-  float: left;
-}
-
-.box {
-  background-color: gray;
-  /* clear: both; */
 }
