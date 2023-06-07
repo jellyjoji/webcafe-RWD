@@ -2,22 +2,30 @@
 @import url(./base.css);
 
 /* 교육과정 정보 테이블 */
-.lecture__table {
-  /* background: yellow; */
-  width: 50%;
+.lecture {
+  background: #000;
+  width: 800px;
   margin: 3rem;
+}
+
+.lecture__table {
+  width: 100%;
+  background: #fff;
   border-top: 2px solid black;
   border-bottom: 2px solid black;
   border-spacing: 0;
   border-collapse: collapse;
+  position: relative;
+  top: -10px;
+  left: -10px;
 }
 
 .lecture__table caption {
   font-size: 2rem;
   font-weight: 700;
-  /* background-color: pink; */
   text-align: left;
-  margin-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
+  background: #fff;
 }
 
 .lecture__table th,
