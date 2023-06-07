@@ -9,7 +9,8 @@
 
 /* 공통 헤더 */
 .appHeader {
-  position: relative;
+  /* position: relative; */
+  position: absolute;
   padding: var(--spacing-base) var(--spacing-lg);
 }
 
