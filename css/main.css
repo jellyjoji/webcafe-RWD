@@ -9,8 +9,7 @@
 
 /* 공통 헤더 */
 .appHeader {
-  /* position: relative; */
-  position: absolute;
+  position: relative;
   padding: var(--spacing-base) var(--spacing-lg);
 }
 
@@ -19,10 +18,8 @@
   background-color: yellowgreen;
   width: 12.75rem; /* 204px */
   height: 3.75rem; /* 60px */
-  position: absolute;
-  bottom: 0;
-  right: 0;
 }
+
 .logo__link {
   display: block;
   width: 100%;
@@ -91,7 +88,21 @@ fieldset {
   .appHeader {
     color: var(--white);
     background: var(--primary-color);
+    padding-top: 3.125rem;
   }
+
+  /* 모바일 로고 */
+  .logo {
+    background-color: blue;
+  }
+  /* 모바일 멤버서비스 */
+  .memberOnly {
+    position: absolute;
+    top: var(--spacing-base);
+    right: var(--spacing-lg);
+  }
+
+  /* 모바일 검색폼 */
 }
 
 /* 데스크탑 디바이스 */
