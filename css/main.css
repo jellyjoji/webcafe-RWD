@@ -28,11 +28,14 @@
 }
 
 /* 공통 멤버 서비스 */
-.memberOnly {
+.memberOnlyWrapper {
+  display: flow-root;
   background-color: violet;
+}
+.memberOnly {
   padding-left: 0;
   list-style: none;
-  display: flow-root;
+  float: right;
 }
 
 .memberOnly li {
@@ -107,4 +110,23 @@ fieldset {
 
 /* 데스크탑 디바이스 */
 @media (min-width: 768px) {
+  /* 데스크탑 헤더 */
+  .appHeader {
+    background-color: yellow;
+  }
+  /* 데스크탑 로고 */
+  .logo {
+    position: absolute;
+    left: var(--spacing-lg);
+    top: 50%;
+    margin-top: -1.875rem;
+    background: red;
+  }
+
+  /* 데스크탑 멤버서비스 */
+
+  /* 데스크탑 검색 폼 */
+  .searchForm__group {
+    text-align: right;
+  }
 }
