@@ -23,6 +23,7 @@
   --accent-board: var(--brown);
   --accent-favorite: var(--orange);
   --accent-twitter: var(--blue);
+  --border-color: var(--silver);
 
   --spacing-xs: 0.5rem; /* 8px */
   --spacing-sm: 0.75rem; /* 12px */
