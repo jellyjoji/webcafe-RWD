@@ -34,3 +34,11 @@
 .memberOnly li {
   float: left;
 }
+
+/* 공통 검색 폼 */
+.formInput__input {
+  border: 1px solid var(--border-color);
+  border-radius: 0.25rem;
+  height: 2rem;
+  padding: 0.125rem 0.75rem;
+}
