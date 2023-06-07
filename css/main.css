@@ -9,6 +9,7 @@
 
 /* 공통 헤더 */
 .appHeader {
+  position: relative;
   padding: var(--spacing-base) var(--spacing-lg);
 }
 
@@ -17,8 +18,10 @@
   background-color: yellowgreen;
   width: 12.75rem; /* 204px */
   height: 3.75rem; /* 60px */
+  position: absolute;
+  bottom: 0;
+  right: 0;
 }
-
 .logo__link {
   display: block;
   width: 100%;
