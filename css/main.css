@@ -15,7 +15,6 @@
 
 /* 공통 로고 */
 .logo {
-  background-color: yellowgreen;
   width: 12.75rem; /* 204px */
   height: 3.75rem; /* 60px */
 }
@@ -27,10 +26,13 @@
   background: url(./../images/webcafe-logo.png) no-repeat 0 0 / 100%;
 }
 
-/* 공통 멤버 서비스 */
+/* 공통 멤버서비스 */
 .memberOnly {
   padding-left: 0;
   list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
 }
 
 /* 공통 검색 폼 */
@@ -74,29 +76,32 @@ fieldset {
 }
 
 .searchForm__group {
-  background-color: skyblue;
+  display: flex;
+  flex-direction: row;
+  gap: var(--spacing-xs);
+}
+
+.searchForm__group .formInput {
 }
 
 /* 모바일 디바이스 */
 @media (min-width: 320px) and (max-width: 767px) {
   /* 모바일 헤더 */
   .appHeader {
-    color: var(--white);
     background: var(--primary-color);
     display: flex;
     flex-direction: column;
+    gap: var(--spacing-sm);
   }
 
-  /* 모바일 로고 */
-  .logo {
-    background-color: blue;
-  }
   /* 모바일 멤버서비스 */
   .memberOnly {
+    color: var(--white);
     order: -1;
   }
   /* 모바일 검색폼 */
-  .searchForm {
+  .searchForm__group .formInput {
+    flex-grow: 1;
   }
 }
 
@@ -104,13 +109,16 @@ fieldset {
 @media (min-width: 768px) {
   /* 데스크탑 헤더 */
   .appHeader {
-    background-color: yellow;
+    background: yellow;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 204px 1fr;
+    gap: var(--spacing-base);
+    max-width: var(--container-width);
+    margin-left: auto;
+    margin-right: auto;
   }
   /* 데스크탑 로고 */
   .logo {
-    background: red;
     grid-area: 1 / 1 / 3 / 2;
     align-self: center;
   }
@@ -118,4 +126,10 @@ fieldset {
   /* 데스크탑 멤버서비스 */
 
   /* 데스크탑 검색 폼 */
+  .searchForm__group {
+    justify-content: flex-end;
+  }
+  .searchForm__group .formInput {
+    width: 25rem;
+  }
 }
