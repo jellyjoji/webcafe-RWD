@@ -83,6 +83,8 @@ fieldset {
   .appHeader {
     color: var(--white);
     background: var(--primary-color);
+    display: flex;
+    flex-direction: column;
   }
 
   /* 모바일 로고 */
@@ -90,8 +92,12 @@ fieldset {
     background-color: blue;
   }
   /* 모바일 멤버서비스 */
-
+  .memberOnly {
+    order: -1;
+  }
   /* 모바일 검색폼 */
+  .searchForm {
+  }
 }
 
 /* 데스크탑 디바이스 */
