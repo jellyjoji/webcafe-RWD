@@ -126,6 +126,7 @@ fieldset {
     height: 100vh;
     backdrop-filter: blur(4px);
     padding: var(--spacing-lg);
+    transform: translateX(-150%);
   }
 
   .menu__item {
