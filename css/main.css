@@ -79,10 +79,17 @@ fieldset {
   border-radius: 0.25rem;
   height: 2rem;
   padding: 0.125rem 0.75rem;
+  width: 100%;
 }
 
 .searchForm__group {
   background-color: skyblue;
+}
+
+.searchForm__group .formInput {
+  display: inline-block;
+  width: calc(100% - 60px);
+  margin-right: 4px;
 }
 
 /* 모바일 디바이스 */
@@ -128,5 +135,9 @@ fieldset {
   /* 데스크탑 검색 폼 */
   .searchForm__group {
     text-align: right;
+  }
+
+  .searchForm__group .formInput {
+    width: 400px;
   }
 }
