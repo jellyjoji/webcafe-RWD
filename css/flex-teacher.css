@@ -1,0 +1,38 @@
+body {
+  margin: 100px;
+}
+
+.container {
+  border: 10px solid blue;
+}
+
+.item1 {
+  background: yellow;
+}
+.item2 {
+  background: pink;
+}
+.item3 {
+  background: skyblue;
+}
+.item4 {
+  background: lime;
+}
+.item5 {
+  background: salmon;
+}
+.item6 {
+  background: silver;
+}
+.item7 {
+  background: teal;
+}
+.item8 {
+  background: aqua;
+}
+.item9 {
+  background: violet;
+}
+.item10 {
+  background: olive;
+}
