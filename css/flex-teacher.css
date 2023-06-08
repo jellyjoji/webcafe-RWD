@@ -1,38 +1,54 @@
 body {
-  margin: 100px;
+  margin: 50px;
 }
 
 .container {
   border: 10px solid blue;
+  display: flex;
+  flex-direction: row;
+  width: 1000px;
+  flex-wrap: wrap;
 }
 
 .item1 {
   background: yellow;
+  order: 1;
+  flex: 1 1 50px;
 }
 .item2 {
   background: pink;
+  flex-basis: 50px;
 }
 .item3 {
   background: skyblue;
+  flex-basis: 50px;
 }
 .item4 {
   background: lime;
+  flex-basis: 50px;
 }
 .item5 {
   background: salmon;
+  flex-basis: 50px;
 }
 .item6 {
   background: silver;
+  flex-basis: 50px;
 }
 .item7 {
   background: teal;
+  flex-basis: 50px;
 }
 .item8 {
   background: aqua;
+  flex-basis: 50px;
 }
 .item9 {
   background: violet;
+  flex-basis: 50px;
 }
 .item10 {
   background: olive;
+  flex-basis: 50px;
+  order: -1;
 }
