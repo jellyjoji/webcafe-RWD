@@ -31,7 +31,7 @@
   padding-left: 0;
   list-style: none;
   display: flex;
-  flex-direction: row;
+  flex-flow: row nowrap;
   justify-content: flex-end;
 }
 
@@ -83,7 +83,7 @@ fieldset {
 
 .searchForm__group {
   display: flex;
-  flex-direction: row;
+  flex-flow: row nowrap;
   gap: var(--spacing-xs);
 }
 
@@ -107,7 +107,7 @@ fieldset {
   .appHeader {
     background: var(--primary-color);
     display: flex;
-    flex-direction: column;
+    flex-flow: column nowrap;
     gap: var(--spacing-sm);
   }
 
@@ -239,7 +239,7 @@ fieldset {
     max-width: var(--container-width);
     color: var(--white);
     display: flex;
-    flex-direction: row;
+    flex-flow: row nowrap;
     justify-content: space-evenly;
   }
 
