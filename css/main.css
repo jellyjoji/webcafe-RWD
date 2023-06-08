@@ -28,9 +28,6 @@
 }
 
 /* 공통 멤버 서비스 */
-.memberOnlyWrapper {
-  background-color: violet;
-}
 .memberOnly {
   padding-left: 0;
   list-style: none;
