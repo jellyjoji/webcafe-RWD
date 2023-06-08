@@ -109,7 +109,6 @@ fieldset {
 @media (min-width: 768px) {
   /* 데스크탑 헤더 */
   .appHeader {
-    background: yellow;
     display: grid;
     grid-template-columns: 204px 1fr;
     gap: var(--spacing-base);
