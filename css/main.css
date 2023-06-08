@@ -159,6 +159,11 @@ fieldset {
     width: 25rem;
   }
 
+  /* 데스크탑 메인 메뉴 제어 버튼 */
+  .buttonWrapper {
+    display: none;
+  }
+
   /* 데스크탑 메인 메뉴 */
   .menu {
     background: var(--secondary-color);
