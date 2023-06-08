@@ -150,6 +150,9 @@ fieldset {
 
   .menu__link {
     display: block;
+    font-size: var(--text-md);
+    font-weight: 700;
     padding: var(--spacing-sm);
+    text-shadow: 1px 1px 0 var(--black), -1px -1px 0 var(--black);
   }
 }
