@@ -81,7 +81,18 @@ fieldset {
   gap: var(--spacing-xs);
 }
 
-.searchForm__group .formInput {
+/* 공통 메인 메뉴 */
+.menu__list {
+  padding-left: 0;
+  list-style: none;
+  background: var(--secondary-color);
+}
+
+.menu__link {
+  display: block;
+  font-weight: 700;
+  padding: var(--spacing-sm);
+  color: var(--white);
 }
 
 /* 모바일 디바이스 */
@@ -102,6 +113,23 @@ fieldset {
   /* 모바일 검색폼 */
   .searchForm__group .formInput {
     flex-grow: 1;
+  }
+
+  /* 모바일 메인 메뉴 */
+  .menu__list {
+    background: var(--accent-opacity-color);
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    width: 70%;
+    height: 100vh;
+    backdrop-filter: blur(4px);
+    padding: var(--spacing-lg);
+  }
+
+  .menu__item {
+    border-bottom: 1px solid var(--black);
   }
 }
 
@@ -140,8 +168,6 @@ fieldset {
     margin-left: auto;
     margin-right: auto;
     max-width: var(--container-width);
-    padding-left: 0;
-    list-style: none;
     color: var(--white);
     display: flex;
     flex-direction: row;
@@ -149,10 +175,7 @@ fieldset {
   }
 
   .menu__link {
-    display: block;
     font-size: var(--text-md);
-    font-weight: 700;
-    padding: var(--spacing-sm);
     text-shadow: 1px 1px 0 var(--black), -1px -1px 0 var(--black);
   }
 }
