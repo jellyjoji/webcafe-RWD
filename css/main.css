@@ -29,17 +29,11 @@
 
 /* 공통 멤버 서비스 */
 .memberOnlyWrapper {
-  display: flow-root;
   background-color: violet;
 }
 .memberOnly {
   padding-left: 0;
   list-style: none;
-  float: right;
-}
-
-.memberOnly li {
-  float: left;
 }
 
 /* 공통 검색 폼 */
@@ -86,19 +80,12 @@ fieldset {
   background-color: skyblue;
 }
 
-.searchForm__group .formInput {
-  display: inline-block;
-  width: calc(100% - 60px);
-  margin-right: 4px;
-}
-
 /* 모바일 디바이스 */
 @media (min-width: 320px) and (max-width: 767px) {
   /* 모바일 헤더 */
   .appHeader {
     color: var(--white);
     background: var(--primary-color);
-    padding-top: 3.125rem;
   }
 
   /* 모바일 로고 */
@@ -106,11 +93,6 @@ fieldset {
     background-color: blue;
   }
   /* 모바일 멤버서비스 */
-  .memberOnly {
-    position: absolute;
-    top: var(--spacing-base);
-    right: var(--spacing-lg);
-  }
 
   /* 모바일 검색폼 */
 }
@@ -123,21 +105,10 @@ fieldset {
   }
   /* 데스크탑 로고 */
   .logo {
-    position: absolute;
-    left: var(--spacing-lg);
-    top: 50%;
-    margin-top: -1.875rem;
     background: red;
   }
 
   /* 데스크탑 멤버서비스 */
 
   /* 데스크탑 검색 폼 */
-  .searchForm__group {
-    text-align: right;
-  }
-
-  .searchForm__group .formInput {
-    width: 400px;
-  }
 }
