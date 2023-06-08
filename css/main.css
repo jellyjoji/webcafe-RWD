@@ -15,8 +15,10 @@
 
 /* 공통 로고 */
 .logo {
-  width: 12.75rem; /* 204px */
-  height: 3.75rem; /* 60px */
+  width: 12.75rem;
+  /* 204px */
+  height: 3.75rem;
+  /* 60px */
 }
 
 .logo__link {
@@ -95,14 +97,17 @@ fieldset {
 }
 
 .menu__link {
+  /* 탭 block으로  분리시키기 : a 태그 범위를 넓히기 위해 */
   display: block;
   font-weight: 700;
+  /* a 태그를 클릭할수 있는 영역이 넓어짐 */
   padding: var(--spacing-sm);
   color: var(--white);
 }
 
 /* 모바일 디바이스 */
 @media (min-width: 320px) and (max-width: 767px) {
+
   /* 모바일 헤더 */
   .appHeader {
     background: var(--primary-color);
@@ -116,6 +121,7 @@ fieldset {
     color: var(--white);
     order: -1;
   }
+
   /* 모바일 검색폼 */
   .searchForm__group .formInput {
     flex-grow: 1;
@@ -181,6 +187,7 @@ fieldset {
   /* 모바일 메인 메뉴 */
   .menu__list {
     background: var(--accent-opacity-color);
+    /* fixed 는 무조건 뷰포트 기준 */
     position: fixed;
     z-index: 100;
     top: 0;
@@ -199,6 +206,7 @@ fieldset {
 
 /* 데스크탑 디바이스 */
 @media (min-width: 768px) {
+
   /* 데스크탑 헤더 */
   .appHeader {
     display: grid;
@@ -208,6 +216,7 @@ fieldset {
     margin-left: auto;
     margin-right: auto;
   }
+
   /* 데스크탑 로고 */
   .logo {
     grid-area: 1 / 1 / 3 / 2;
@@ -218,6 +227,7 @@ fieldset {
   .searchForm__group {
     justify-content: flex-end;
   }
+
   .searchForm__group .formInput {
     width: 25rem;
   }
