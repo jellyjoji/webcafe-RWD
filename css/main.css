@@ -127,6 +127,7 @@ fieldset {
     position: absolute;
     right: var(--spacing-lg);
     top: 3.75rem;
+    overflow: hidden;
   }
 
   .button--burger {
@@ -146,6 +147,7 @@ fieldset {
     height: 20%;
     background: var(--white);
     border-radius: 1.5rem;
+    transition: all 400ms;
   }
 
   .button--burgerBarTop {
@@ -160,6 +162,20 @@ fieldset {
   .button--burgerBarBottom {
     top: 100%;
     transform: translateY(-100%);
+  }
+
+  .is--active .button--burgerBarTop {
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+  }
+
+  .is--active .button--burgerBarMiddle {
+    transform: translate(-120%, -50%);
+  }
+
+  .is--active .button--burgerBarBottom {
+    top: 50%;
+    transform: translateY(-50%) rotate(-45deg);
   }
 
   /* 모바일 메인 메뉴 */
