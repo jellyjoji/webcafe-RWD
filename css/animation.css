@@ -112,7 +112,6 @@ body {
   /* 중앙정렬 */
   margin: 0 auto;
   transition-delay: 3s, 0s;
-  transition: background 3s 3s, border-radius 3s 0s ;
 }
 /* 순서 ::before < visual-text < ::after */
 .visual-text {
