@@ -104,15 +104,23 @@ body {
 }
 
 .card-wrapper {
-  width: 800px;
+  width: 750px;
   height: 400px;
   margin: 50px;
+  perspective: 600px;
 }
 
 .card {
   width: 100%;
   height: 100%;
   position: relative;
+  transform-style: preserve-3d;
+  transform-origin: center right;
+  transition: transform 1s;
+}
+
+.card.is--flipped {
+  transform: translateX(-100%) rotateY(-180deg);
 }
 
 .card-face {
@@ -122,12 +130,14 @@ body {
   width: 100%;
   height: 100%;
   border: 2px solid black;
+  backface-visibility: hidden;
 }
 
 .card-face-black {
-  background: url(./../images/likelion-black.png);
+  background: url(./../images/likelion-black.png) no-repeat 0 0;
+  transform: rotateY(180deg);
 }
 
 .card-face-white {
-  background: url(./../images/likelion-white.png);
+  background: url(./../images/likelion-white.png) no-repeat 0 0;
 }
