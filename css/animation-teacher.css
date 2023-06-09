@@ -1,1 +1,13 @@
 /* 애니메이션 CSS */
+
+body {
+  height: 100vh;
+  background: url(./../assets/bg_flower.png),
+    linear-gradient(
+      to right,
+      #e8f230 0%,
+      #3ac425 37%,
+      #f93927 71%,
+      #0685e5 100%
+    );
+}
