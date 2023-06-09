@@ -127,13 +127,15 @@ fieldset {
     flex-grow: 1;
   }
 
+  /*  햄버거바 */
   /* 모바일 메인 메뉴 제어 버튼 */
   .buttonWrapper {
-    background: yellow;
     position: absolute;
     right: var(--spacing-lg);
-    top: 3.75rem;
+    top: 3.5rem;
+    /* tap 키로 접근하는 순간 버튼 바깥쪽에 outline 으로 활성화가 되서 엑티브 상태가 안보임 -> 그래서 :focus 가상 클래스를 지정해준다a */
     overflow: hidden;
+    padding: 0.25rem;
   }
 
   .button--burger {
@@ -196,9 +198,12 @@ fieldset {
     height: 100vh;
     backdrop-filter: blur(4px);
     padding: var(--spacing-lg);
+    /* 메뉴바를 안보이도록 이동  */
     transform: translateX(-150%);
+    /* 슬라이딩 애니메이션 효과  */
+    /* 400ms = 0.4s = 0.4초 */
+    transition: all 400ms;
   }
-
   .menu__item {
     border-bottom: 1px solid var(--black);
   }

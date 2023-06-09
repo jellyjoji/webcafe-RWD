@@ -1,5 +1,8 @@
 (function () {
   // ESC 키를 누를 때 그리드 보이기 / 감추기
+  // key 관련 script : keyuo & keydown 
+  // keyup : 키보드를 눌렀다 떼는 시점 
+  // 절차식 프로그래밍 언어 : 차례대로 수행함 
   document.addEventListener('keyup', function (event) {
     // ESC만으로 그리드를 켜고 끄는 기능을 사용하면, 다른 곳에서 ESC를 사용할 수 없는 문제. Shift + ESC로 문제 완화
     if (event.shiftKey && (event.key === 'Escape' || event.keyCode === 27)) {
@@ -41,6 +44,8 @@
     
       // 키보드 트랩 이벤트 핸들링
       function keyboardTrapInMenu() {
+        // handleLastLinkTrap : 메뉴 영역을 빠져나가지 못하는 trap 
+        // keydown : 키보드에 접근했을때 vs keyup : 키보드를 눌렀다 뗄 때
         lastItem.addEventListener('keydown', handleLastLinkTrap);
         btn.addEventListener('keydown', handleBtnTrap);
         window.addEventListener('keyup', handleTrapOff);

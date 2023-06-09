@@ -1,0 +1,132 @@
+/* 애니메이션 CSS */
+
+body {
+  height: 100vh;
+  /* background-image: linear-gradient(red, green); */
+  /* background-image: linear-gradient(-45deg, red 30%, green 100%); */
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#f0b7a1+1,d60241+32,6f8c10+60,6f8c10+60,6f8c10+67,3916ba+81,bf6e4e+100 */
+  /* 만약 그라디언트 지원하지 않으면 이 색상이 나오게 하겠다 */
+  background: #f0b7a1;
+  /* Old browsers */
+  /* 이미지와 그라디언트 같이 사용하고 싶으면 순서는 이미지 먼저 올리고 반드시 마지막에 그라디언트 배경 깔아야 한다 */
+  background: url(./../assets/bg_flower.png) no-repeat 50% 0,
+    linear-gradient(to right, #f0b7a1 1%, #d60241 32%, #6f8c10 60%, #6f8c10 60%, #6f8c10 67%, #3916ba 81%, #bf6e4e 100%) repeat;
+  padding-top: 110px;
+}
+
+/* keyframe 선언 */
+/* identifier 식별자 */
+/* 필수사항) moveEffect : animation name  */
+/* 필수사항) animation duration */
+@keyframes moveEffect {
+
+  /* from{}
+  to{} */
+  /* % 단위가 편한점은 원하는 퍼센테이지마다 설정 가능 */
+  0% {
+    background: yellow;
+    /* 이동하게 해주는 속성 transform: translate(); */
+    /* margin 은 움직이게는  가능하나 상자가 같이 움직인다  */
+    /* margin: 0; */
+    color: rgba(0, 0, 0, 0);
+  }
+
+  100% {
+    background: pink;
+    /* reflow 성능관점에서 translate 사용이 가장 적절 */
+    transform: translate(400px, 75px);
+    /* 필요한 애니메이션 추가하기 */
+    font-size: 24px;
+    /* 글자를 투명상태에서 검정색으로 나타나게 해주기  */
+    color: rgba(0, 0, 0, 1);
+  }
+}
+
+/* 공통적인 코드는 모으기 */
+.visual::before, .visual::after{
+  /* content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  top: 0;
+  left: 0; */
+}
+
+/* faddEffect 2개씩 교차하면서 서서히 사라지게 */
+/* div는 블록, ::before 은 인라인 요소 */
+.visual::before{
+  content: "이전 요소";
+  /* 글자가 남지않게  */
+  /* content: ""; */
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: url(./../assets/ani_flower_01.png) no-repeat 100px 15px, url(./../assets/ani_flower_02.png) no-repeat 400px 10px, blue;
+  /* ::after 에 가리지 않으려면 z-index 로 조정 가능 */
+  /* z-index: 10; */
+  top: 0;
+  left: 0;
+}
+/* ::after (가장 마지막 자식요소) 는 위치를 잡아주지 않으면 원래 위치인 마지막에 위치 */
+.visual::after{
+  content: "다음 요소";
+  background: url(./../assets/ani_flower_03.png) no-repeat 300px 15px, url(./../assets/ani_flower_04.png) no-repeat 200px 10px, purple;
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  /* animation */
+  animation-name: fadeEffect;
+  animation-duration: 2s;
+  /* animation-iteration-count : 애니메이션 몇번 반복할것인가 설정  */
+  animation-iteration-count: infinite;
+  /* alternate : 양방향(순방향 normal , 역방향 reverse)으로 교차하며 번갈아 보여준다. */
+  animation-direction: alternate;
+  /* animation-play-state : 지속적으로 움직이는 동적인 애니메이션을 멈추기 위해 */
+  animation-play-state: paused;
+  /* animation-timing-function : 살아있는 느낌을 주는 움직임 */
+  animation-timing-function: cubic-bezier(.04,1.56,.62,.64);
+}
+@keyframes fadeEffect {
+  0%{
+    opacity: 1;
+    background: skyblue;
+    color: rgba(0, 0, 0, 1);
+  }
+  50%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+    transform: translate(200px, 75px);
+    font-size: 4rem;
+    color: rgba(0, 0, 0, 0);
+  }
+}
+.visual {
+  border: 1px solid green;
+  background: yellow;
+  width: 940px;
+  height: 120px;
+  /* 중앙정렬 */
+  margin: 0 auto;
+  transition-delay: 3s, 0s;
+  transition: background 3s 3s, border-radius 3s 0s ;
+}
+/* 순서 ::before < visual-text < ::after */
+.visual-text {
+  /* position: absolute;  */
+  /* 필수사항  animation name, animation duration  */
+  animation-name: moveEffect;
+  animation-duration: 3s;
+  /* 원하면 주는 선택 속성 forwards or backwards */
+  animation-fill-mode: forwards;
+  /* 움직이려면 inline 이라도 block 이어야 한다.  */
+  display: inline-block;
+}
+
+/* visual 이 is—active 를 가졌을때로 범위 한정 (여러군데 쓰일수 있으니까) */
+.is--active.visual {
+  background: pink;
+}
