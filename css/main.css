@@ -123,11 +123,11 @@ fieldset {
 
   /* 모바일 메인 메뉴 제어 버튼 */
   .buttonWrapper {
-    background: yellow;
     position: absolute;
-    right: var(--spacing-lg);
-    top: 3.75rem;
+    right: var(--spacing-md);
+    top: 3.5rem;
     overflow: hidden;
+    padding: 0.25rem;
   }
 
   .button--burger {
@@ -135,7 +135,10 @@ fieldset {
     display: block;
     width: 1.875rem;
     height: 1.875rem;
-    background-color: blue;
+  }
+
+  .button--burger:focus {
+    outline-offset: 2px;
   }
 
   .button--burgerBarTop,
