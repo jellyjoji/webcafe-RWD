@@ -50,11 +50,14 @@ body {
 .visual:hover {
   background: skyblue;
   border-radius: 0 50px 0 50px;
+  border-width: 10px;
+  border-style: dashed;
 }
 
 .is--active.visual {
   background: pink;
   border-radius: 0 50px 0 50px;
+  border-width: 10px;
 }
 
 .visual::before,
@@ -88,4 +91,20 @@ body {
   animation-name: moveEffect;
   animation-duration: 3s;
   animation-fill-mode: forwards;
+}
+
+/* 카드 뒤집기 */
+.flip-button {
+  background: darkblue;
+  color: white;
+  border: 0;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+.card-wrapper {
+  width: 800px;
+  height: 400px;
+  margin: 50px;
 }
