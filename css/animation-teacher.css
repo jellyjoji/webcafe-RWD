@@ -2,12 +2,45 @@
 
 body {
   height: 100vh;
-  background: url(./../assets/bg_flower.png),
-    linear-gradient(
-      to right,
-      #e8f230 0%,
-      #3ac425 37%,
-      #f93927 71%,
-      #0685e5 100%
-    );
+  background: url(./../assets/bg_flower.png) no-repeat 50% 0,
+    linear-gradient(to bottom, #aaa, #ccc, #eee, #fff) repeat 0 0;
+  padding-top: 110px;
+}
+
+/* keyframe 선언 */
+@keyframes moveEffect {
+  0% {
+    background: yellow;
+    /* padding: 0; */
+    /* transform: translate(0, 0); */
+    top: 0;
+    left: 0;
+    font-size: 12px;
+    color: rgba(0, 0, 0, 0);
+  }
+  100% {
+    background: pink;
+    /* padding: 75px 0 0 400px; */
+    /* transform: translate(400px, 75px); */
+    top: 75px;
+    left: 400px;
+    font-size: 24px;
+    color: rgba(0, 0, 0, 1);
+  }
+}
+
+.visual {
+  /* border: 1px solid green; */
+  width: 940px;
+  height: 120px;
+  margin: 0 auto;
+  background-color: skyblue;
+  position: relative;
+}
+
+.visual-text {
+  position: absolute;
+  animation-name: moveEffect;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
 }
