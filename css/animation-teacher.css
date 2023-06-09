@@ -44,9 +44,7 @@ body {
   position: relative;
   background: yellow;
   border-radius: 50px 0 50px 0;
-  transition-property: background, border-radius;
-  transition-duration: 3s, 3s;
-  transition-delay: 3s, 0s;
+  transition: all 300ms ease-in-out;
 }
 
 .visual:hover {
