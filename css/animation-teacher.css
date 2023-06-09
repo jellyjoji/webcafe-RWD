@@ -43,10 +43,15 @@ body {
   margin: 0 auto;
   position: relative;
   background: yellow;
+  border-radius: 50px 0 50px 0;
+  transition-property: background, border-radius;
+  transition-duration: 5s, 3s;
+  transition-delay: 3s, 0s;
 }
 
 .is--active.visual {
   background: pink;
+  border-radius: 0 50px 0 50px;
 }
 
 .visual::before,
