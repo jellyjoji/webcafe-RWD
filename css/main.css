@@ -297,17 +297,27 @@ fieldset {
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: auto;
     gap: var(--spacing-md);
+    max-width: var(--container-width);
+    margin-left: auto;
+    margin-right: auto;
   }
   .news {
     grid-area: 1 / 1/ 2 / 13;
     height: 200px;
   }
   .book {
+    grid-area: 2 / 1 / 4 / 5;
+    height: 400px;
   }
   .board {
+    grid-area: 3 / 6 / 4 / 13;
   }
   .favorite {
+    grid-area: 2 / 10 / 3 / 13;
+    height: 200px;
   }
   .twitter {
+    grid-area: 2 / 5 / 3 / 10;
+    height: 200px;
   }
 }
