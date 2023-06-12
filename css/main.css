@@ -103,6 +103,8 @@ fieldset {
 
 /* 공통 메인 콘텐츠 */
 .appMain {
+  display: grid;
+  padding: var(--spacing-base) var(--spacing-lg);
 }
 
 /* 공통 추천서적 */
@@ -232,6 +234,12 @@ fieldset {
   .menu__item {
     border-bottom: 1px solid var(--black);
   }
+
+  /* 모바일 메인 콘텐츠 */
+  .appMain {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
 }
 
 /* 데스크탑 디바이스 */
@@ -286,43 +294,20 @@ fieldset {
   }
   /* 데스크탑 메인 콘텐츠 */
   .appMain {
-    max-width: var(--container-width);
-    margin-left: auto;
-    margin-right: auto;
-    padding: var(--spacing-base) var(--spacing-lg);
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto;
+    gap: var(--spacing-md);
   }
-
-  .book {
-    height: 40vh;
-  }
-  .news,
-  .board,
-  .favorite,
-  .twitter {
-    height: 20vh;
-  }
-
-  .main-wrapper {
-    display: flex;
-    flex-flow: row nowrap;
+  .news {
+    grid-area: 1 / 1/ 2 / 13;
+    height: 200px;
   }
   .book {
-    width: 33.19672131147541%;
-  }
-  .main-wrapper-inner {
-    flex-grow: 1;
-  }
-  .main-wrapper-sub-inner {
-    display: flex;
-    flex-flow: row nowrap;
-  }
-  .twitter {
-    width: 65%;
-  }
-  .favorite {
-    width: 35%;
   }
   .board {
-    margin-left: 8.299180327868852%;
+  }
+  .favorite {
+  }
+  .twitter {
   }
 }
