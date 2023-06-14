@@ -149,7 +149,34 @@ fieldset {
   font-size: var(--text-base);
 }
 
-.news__title {}
+.news__title {
+
+}
+.book__info{
+  text-align: center;
+}
+.book__infoRatingStar{
+  color: red;
+}
+dd{
+  width: 340px;
+}
+/* 새소식 */
+time{
+  /* display: block;
+  text-align: right; */
+  float: right;
+  background: #000;
+}
+/* video */
+.news{
+  width: 100%;
+
+}
+.news__videoContainer{
+  max-width: 100%;
+  height: auto;
+}
 
 /*  한 이미지 위치조정으로 여러 이미지 보이게하기 */
 .sprite {

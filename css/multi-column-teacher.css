@@ -1,0 +1,22 @@
+body {
+  margin: 50px;
+}
+
+/* 멀티 컬럼 레이아웃 */
+.container {
+  border: 1px solid silver;
+  padding: 50px;
+  columns: 200px 4;
+  column-rule: #aaa dashed 1px;
+  column-gap: 50px;
+}
+
+h1 {
+  background: teal;
+  color: white;
+  column-span: all;
+}
+
+p {
+  text-align: justify;
+}
