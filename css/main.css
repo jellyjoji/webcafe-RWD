@@ -112,7 +112,9 @@ fieldset {
 
 /* 공통 메인 콘텐츠 제목 */
 .sprite {
-  background: silver url(./../images/sprite_main.png) no-repeat;
+  background: url(./../images/sprite_main.png) no-repeat;
+  padding-left: 4.0625rem;
+  height: 3.75rem;
 }
 
 .spriteBook {
@@ -154,8 +156,6 @@ fieldset {
 .appMain [class*="__title"] {
   display: flex;
   flex-flow: column nowrap;
-  height: 3.75rem;
-  padding-left: 4.0625rem;
   justify-content: center;
 }
 
