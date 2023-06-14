@@ -204,6 +204,16 @@ fieldset {
   margin-top: var(--spacing-sm);
 }
 
+.iframeWrapper {
+  background: yellow;
+  aspect-ratio: 16 /9;
+}
+
+iframe {
+  width: 100%;
+  height: 100%;
+}
+
 .news__date {
   display: block;
   text-align: right;
