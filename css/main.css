@@ -6,6 +6,9 @@
 
 /* 웹카페 반응형 스타일 */
 /* 공통 스타일 */
+body {
+  font-size: var(--text-sm);
+}
 
 /* 공통 헤더 */
 .appHeader {
@@ -105,6 +108,24 @@ fieldset {
 .appMain {
   display: grid;
   padding: var(--spacing-base) var(--spacing-lg);
+}
+
+/* 공통 메인 콘텐츠 제목 */
+.book__title {
+  background: orange url(./../images/sprite_main.png) no-repeat;
+  display: flex;
+  flex-flow: column nowrap;
+  height: 3.75rem;
+  padding-left: 4.0625rem;
+  justify-content: center;
+}
+.book__koTitle {
+  font-size: var(--text-md);
+}
+
+.book__enTitle {
+  font-weight: 400;
+  font-size: var(--text-base);
 }
 
 /* 공통 추천서적 */
@@ -301,9 +322,9 @@ fieldset {
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: auto;
     grid-template-areas:
-      "book book book book twitter twitter twitter twitter twitter favorite favorite favorite"
-      "book book book book . board board board board board board board"
-      "news news news news news news news news news news news news ";
+      "news news news news news news news news news news news news "
+      "book book book book book twitter twitter twitter twitter favorite favorite favorite"
+      "book book book book book board board board board board board board";
   }
   .news {
     grid-area: news;
