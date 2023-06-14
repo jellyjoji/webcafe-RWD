@@ -123,6 +123,34 @@ fieldset {
   background-position: 0 -230px;
 }
 
+.spriteBoard {
+  background-position: 0 -115px;
+}
+
+.spriteFavorite {
+  background-position: 0 -345px;
+}
+
+.spriteTwitter {
+  background-position: 0 -460px;
+}
+
+.accentBook {
+  color: var(--accent-book);
+}
+.accentNews {
+  color: var(--accent-news);
+}
+.accentBoard {
+  color: var(--accent-board);
+}
+.accentFavorite {
+  color: var(--accent-favorite);
+}
+.accentTwitter {
+  color: var(--accent-twitter);
+}
+
 .appMain [class*="__title"] {
   display: flex;
   flex-flow: column nowrap;
