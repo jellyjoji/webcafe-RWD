@@ -168,9 +168,34 @@ fieldset {
   font-size: var(--text-base);
 }
 
+.appMain [class*="__summary"] {
+  line-height: 1.5;
+  margin-top: var(--spacing-base);
+}
+
 /* 공통 추천서적 */
 .book {
   background: yellow;
+}
+
+.book__cover {
+  width: 60%;
+  text-align: center;
+  margin: var(--spacing-base) auto;
+}
+
+.book__coverCaption {
+  margin-top: var(--spacing-sm);
+}
+
+.book__info {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
+.ratingStar {
+  font-size: var(--text-lg);
 }
 
 /* 공통 새소식 */
