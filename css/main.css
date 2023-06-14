@@ -200,7 +200,7 @@ fieldset {
 }
 
 /* 공통 새소식 */
-.news__video {
+.news__videoContainer {
   margin-top: var(--spacing-sm);
 }
 
