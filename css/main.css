@@ -10,6 +10,11 @@ body {
   font-size: var(--text-sm);
 }
 
+/* 공통 아이콘 */
+.far {
+  margin-right: var(--spacing-xs);
+}
+
 /* 공통 헤더 */
 .appHeader {
   position: relative;
@@ -209,14 +214,41 @@ fieldset {
   font-size: var(--text-base);
 }
 
+.appMain [class*="__summary"] {
+  line-height: 1.5;
+  margin-top: var(--spacing-base);
+}
+
 /* 공통 추천서적 */
-.book {
-  background: yellow;
+.book__cover {
+  width: 60%;
+  text-align: center;
+  margin: var(--spacing-base) auto;
+}
+
+.book__coverCaption {
+  margin-top: var(--spacing-sm);
+}
+
+.book__info {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
+.ratingStar {
+  font-size: var(--text-lg);
 }
 
 /* 공통 새소식 */
-.news {
-  background: pink;
+.news__videoContainer {
+  margin-top: var(--spacing-sm);
+}
+
+.news__date {
+  display: block;
+  text-align: right;
+  margin-top: var(--spacing-sm);
 }
 
 /* 공통 게시판 */
@@ -430,7 +462,6 @@ fieldset {
 
   .book {
     grid-area: book;
-    height: 400px;
   }
 
   .board {
@@ -439,11 +470,9 @@ fieldset {
 
   .favorite {
     grid-area: favorite;
-    height: 200px;
   }
 
   .twitter {
     grid-area: twitter;
-    height: 200px;
   }
 }
