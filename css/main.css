@@ -104,6 +104,33 @@ fieldset {
   padding: var(--spacing-sm);
   color: var(--white);
 }
+/* 공통 메인 콘텐츠 */
+.appMain{
+  border: 5px solid;
+  display: grid;
+  padding: var(--spacing-base) var(--spacing-lg);
+}
+/* 공통 추천 서적 */
+.book{
+  background: yellow;
+}
+/* 공통 새소식 서적 */
+.news{
+  background: pink;
+}
+/* 공통 게시판 서적 */
+.board{
+  background: purple;
+}
+/* 공통 인기사이트 서적 */
+.favorite{
+  background: salmon;
+}
+/* 공통 트위터 서적 */
+.twitter{
+  background: blue;
+}
+
 
 /* 모바일 디바이스 */
 @media (min-width: 320px) and (max-width: 767px) {
@@ -268,5 +295,19 @@ fieldset {
   .menu__link {
     font-size: var(--text-md);
     text-shadow: 1px 1px 0 var(--black), -1px -1px 0 var(--black);
+  }
+  /* 데스크탑 appMain */
+  .appMain{
+    padding: var(--spacing-base) var(--spacing-lg);
+    grid-template-columns: repeat(12, 1fr);
+    /* 자동으로 늘어나기 때문에 행은 하나만 줘도 됨  */
+    grid-template-rows: auto;
+    gap: var(--spacing-main);
+  }
+  .news{
+    /* 1번에서 시작하겠다  */
+    grid-row-start : 1;
+    grid-column-start : 1;
+    grid-column-end : 1;
   }
 }

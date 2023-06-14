@@ -1,0 +1,27 @@
+.container {
+  background: yellow;
+  border: 1px solid silver;
+  padding: 50px;
+  /* 신문 레이아웃 효과 */
+  column-width: 200px;
+  /* 단의 갯수만 계산  */
+  column-count: 4;
+  /* column-width 와 column-count 를 같이 주면 자동으로 유연하게 크기 조절 */
+  /* column-width 와 column-count 의 단축 표기법  */
+  columns: 200px 4;
+  /* 단과 단사이 구분선  */
+  column-rule: #aaa dotted 4px;
+  /* column-rule-width 굵기 */
+  /* column-rule-style */
+
+  /* 페이지 단위로 인쇄 설정 */
+  break-before: page;
+  /* break-before, break-after 는 프린트 설정용 */
+}
+
+h1 {
+  background: #fff;
+  /* 전체 단을 사용하고 싶을때 (원래 block 요소) */
+  column-span: all;
+  /* Global 전역속성  */
+}

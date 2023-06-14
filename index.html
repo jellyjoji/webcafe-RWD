@@ -1,1 +1,132 @@
-<!-- 반응형 웹 프로젝트 -->
+<!DOCTYPE html>
+<html lang="ko-KR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>웹카페 - 반응형 웹</title>
+  <link rel="shortcut icon" href="images/common/favicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" href="images/common/apple-touch-icon.png" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+    integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
+  <link rel="stylesheet" as="style" crossorigin
+    href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard-dynamic-subset.css" />
+  <link rel="stylesheet" href="css/index.css" />
+  <script src="js/navigation.js" defer></script>
+</head>
+
+<body>
+
+  <header class="appHeader">
+    <h1 class="logo">
+      <a href="/" class="logo__link" aria-label="web cafe"></a>
+    </h1>
+
+    <ul class="memberOnly">
+      <li>
+        <a href="/">로그인</a>
+      </li>
+      <li>
+        <span class="divider" aria-hidden="true">ㅣ</span><a href="/">회원가입</a>
+      </li>
+      <li>
+        <span class="divider" aria-hidden="true">ㅣ</span><a href="/">커뮤니티</a>
+      </li>
+    </ul>
+
+    <form action="https://formspree.io/f/xeqwwbwk" method="POST" class="searchForm">
+      <fieldset>
+        <legend>검색 폼</legend>
+        <div class="searchForm__group">
+          <div class="formInput">
+            <label for="search" class="a11yHidden formInput__label">검색어</label>
+            <input type="search" id="search" name="search" required class="formInput__input"
+              placeholder="검색어를 입력하세요." />
+          </div>
+          <button type="submit" class="button button--fillSecondary">검색</button>
+        </div>
+      </fieldset>
+    </form>
+
+    <div class="buttonWrapper">
+      <button type="button" class="button--burger button--none" aria-label="메뉴 열기">
+        <span class="button--burgerBarTop"></span>
+        <span class="button--burgerBarMiddle"></span>
+        <span class="button--burgerBarBottom"></span>
+      </button>
+    </div>
+  </header>
+  <nav class="appNavigation menu">
+    <!-- 이게 무슨 컨텐츠인지 숨겨진 제목 필요 a11yHidden -->
+    <h2 class="a11yHidden">메인 메뉴</h2>
+    <!-- list 를 숫자 필요없는 ul li 로 묶어줌  -->
+    <!-- ul.menu__list>li.menu__item*5>a.menu__link[href="/"] -->
+    <ul class="menu__list">
+      <li class="menu__item"><a href="/" class="menu__link">HTML에 대해</a></li>
+      <li class="menu__item"><a href="/" class="menu__link">CSS에 대해</a></li>
+      <li class="menu__item"><a href="/" class="menu__link">웹표준/웹접근성</a></li>
+      <li class="menu__item"><a href="/" class="menu__link">묻고 답하기</a></li>
+      <li class="menu__item"><a href="/" class="menu__link">자료실</a></li>
+    </ul>
+  </nav>
+
+  <!-- Grid System -->
+  <div class="grid gridView">
+    <div class="gridColumn"></div>
+    <div class="gridColumn"></div>
+    <div class="gridColumn"></div>
+    <div class="gridColumn"></div>
+    <div class="gridColumn"></div>
+    <div class="gridColumn"></div>
+    <div class="gridColumn"></div>
+    <div class="gridColumn"></div>
+    <div class="gridColumn"></div>
+    <div class="gridColumn"></div>
+    <div class="gridColumn"></div>
+    <div class="gridColumn"></div>
+  </div>
+
+  <!-- 공통 요소  -->
+  <!-- main.appMain>section.book>span*2  -->
+  <main class="appMain">
+    <section class="book">
+      <h2 class="book__title sprite spriteBook sectionTitle">
+        <span class="book__koTitle">추천서적</span>
+        <span class="book__enTitle accentBook">Recommended Book</span>
+      </h2>
+      <figure class="book__cover">
+        <img src="images/book_rwd.jpg" alt="book" class="book__coverImage" />
+        <figcaption class="book__coverCaption">반응형웹 핵심 가이드</figcaption>
+      </figure>
+      <div class="book__info">
+        <span class="a11yHidden">평점</span>
+        <span aria-hidden="true" aria-label="5점 만점에 4점" class="book__infoRatingStar accentBook">별별별</span>
+        <p>dddddddd</p>
+        <dl class="info">
+          <dt>저자 김데레사</dt>
+          <dd>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+          </dd>
+        </dl>
+      </div>
+    </section>
+    <!--  -->
+    <section class="news">
+      <h2 class="news__title sprite spritenews sectionTitle">
+        <span class="news__koTitle">새소식</span>
+        <span class="news__enTitle accentNews">Recommended news</span>
+      </h2>
+    </section>
+    <section class="board">
+      <h2 class="news__title sprite spriteboard sectionTitle">
+        <span class="news__koTitle">게시판</span>
+        <span class="news__enTitle accentNews">Recommended news</span>
+      </h2>
+    </section>
+    <section class="favorite">인기사이트</section>
+    <section class="twitter">트위터</section>
+  </main>
+</body>
+
+</html>
