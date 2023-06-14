@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>웹카페 - 반응형 웹</title>
+  <link rel="shortcut icon" href="images/common/favicon.ico"
+    type="image/x-icon" />
+  <link rel="apple-touch-icon" href="images/common/apple-touch-icon.png" />
+  <link rel="stylesheet"
+    href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+    integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+    crossorigin="anonymous" />
+  <link rel="stylesheet" as="style" crossorigin
+    href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard-dynamic-subset.css" />
+  <link rel="stylesheet" href="css/mian1.css" />
+  <!-- <script src="js/navigation.js" defer></script> -->
+</head>
+
+<body>
+
+  <header class="appHeader">
+    <h1 class="logo">
+      <a href="/" class="logo__link" aria-label="web cafe"></a>
+    </h1>
+
+    <ul class="memberOnly">
+      <li>
+        <a href="/">로그인</a>
+      </li>
+      <li>
+        <span class="divider" aria-hidden="true">ㅣ</span><a href="/">회원가입</a>
+      </li>
+      <li>
+        <span class="divider" aria-hidden="true">ㅣ</span><a href="/">커뮤니티</a>
+      </li>
+    </ul>
+
+    <form action="https://formspree.io/f/xeqwwbwk" method="POST"
+      class="searchForm">
+      <fieldset>
+        <legend>검색 폼</legend>
+        <div class="searchForm__group">
+          <div class="formInput">
+            <label for="search" class="a11yHidden formInput__label">검색어</label>
+            <input type="search" id="search" name="search" required
+              class="formInput__input" placeholder="검색어를 입력하세요." />
+          </div>
+          <button type="submit" class="button button--fillSecondary">검색</button>
+        </div>
+      </fieldset>
+    </form>
+
+    <div class="buttonWrapper">
+      <button type="button" class="button--burger button--none"
+        aria-label="메뉴 열기">
+        <span class="button--burgerBarTop"></span>
+        <span class="button--burgerBarMiddle"></span>
+        <span class="button--burgerBarBottom"></span>
+      </button>
+    </div>
+  </header>
+  <nav class="appNavigation menu">
+    <!-- 이게 무슨 컨텐츠인지 숨겨진 제목 필요 a11yHidden -->
+    <h2 class="a11yHidden">메인 메뉴</h2>
+        <!-- list 를 숫자 필요없는 ul li 로 묶어줌  -->
+    <!-- ul.menu__list>li.menu__item*5>a.menu__link[href="/"] -->
+    <ul class="menu__list">
+      <li class="menu__item"><a href="/" class="menu__link">HTML에 대해</a></li>
+      <li class="menu__item"><a href="/" class="menu__link">CSS에 대해</a></li>
+      <li class="menu__item"><a href="/" class="menu__link">웹표준/웹접근성</a></li>
+      <li class="menu__item"><a href="/" class="menu__link">묻고 답하기</a></li>
+      <li class="menu__item"><a href="/" class="menu__link">자료실</a></li>
+    </ul>
+  </nav>
+  <main class="appMain">
+    <section class="book">
+      <h2 class="book__title sprite spriteBook">
+        <span class="book__koTitle">추천서적</span>
+        <span class="book__enTitle accentBook">Recommended Book</span>
+      </h2>
+      <figure class="book__cover">
+        <img src="./images/book_rwd.jpg" alt="" class="book__coverImage"
+          aria-labelledby="bookSubject" />
+        <figcaption class="book__coverCaption" id="bookSubject">반응형웹 핵심 가이드
+        </figcaption>
+      </figure>
+      <div class="book__info">
+        <span class="book__infoAuthor">저자 김데레사</span>
+        <span class="a11yHidden">평점</span>
+        <span aria-hidden="true" aria-label="5점만점에 4점"
+          class="ratingStar accentBook">★★★★☆</span>
+      </div>
+      <p class="book__summary">
+        반응형웹 디자인을 위한 핵심 내용을 다루고 있으며 미디어쿼리, 유연한 레이아웃, 반응형
+        이미지 기법을 학습할 수 있다. 모바일 및 다양한 해상도에 대응이 가능한 웹디자인을 이 책으로 시작해 보자!
+      </p>
+    </section>
+    <section class="news">
+      <h2 class="news__title sprite spriteNews">
+        <span class="news__koTitle">새소식</span>
+        <span class="news__enTitle accentNews">WebCafe News</span>
+      </h2>
+      <figure class="news__videoContainer">
+        <div class="iframeWrapper">
+          <iframe src="https://www.youtube.com/embed/h77tXLhMF7o"
+            title="스크린리더 착한마크업 - 별점,평점 편" frameborder="0"
+            allowfullscreen></iframe>
+        </div>
+        <figcaption class="a11yHidden">구글 개발자 이야기</figcaption>
+      </figure>
+      <p class="news__summary">
+        구글플레이는 다양한 분야에서 활약하고 있는 국내 개발사들을 모시고 직접 이야기를 나눠보는
+        ‘구글플레이 개발자와의 대화’ 행사를 정기적으로 개최할 예정입니다. 오늘 3월 29일(수) 구글 캠퍼스 서울에서 열린 첫 번째
+        ‘구글플레이 개발자와의 대화’는 ‘해외에서 빵터진 한국 앱'을 주제로 진행됐는데요, 국내 앱 시장은 물론 글로벌 시장에서도 주목
+        받으며 글로벌 진출의 본보기가 되고 있는 개발사 세 곳과 함께 했습니다.
+      </p>
+      <time class="news__date" datetime="2023-06-14T14:24:30">
+        <span class="far fa-calendar accentNews" aria-hidden="true"></span>
+        2023.6.14
+      </time>
+    </section>
+    <section class="board">
+      <h2 class="board__title sprite spriteBoard">
+        <span class="board__koTitle">게시판</span>
+        <span class="board__enTitle accentBoard">WebCafe Board</span>
+      </h2>
+    </section>
+    <section class="favorite">
+      <h2 class="favorite__title sprite spriteFavorite">
+        <span class="favorite__koTitle">인기 사이트</span>
+        <span class="favorite__enTitle accentFavorite">Favorite Site</span>
+      </h2>
+    </section>
+    <section class="twitter">
+      <h2 class="twitter__title sprite spriteTwitter">
+        <span class="twitter__koTitle">트위터</span>
+        <span class="twitter__enTitle accentTwitter">WebCafe Twitter</span>
+      </h2>
+    </section>
+  </main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Grid System -->
+  <div class="grid gridView">
+    <div class="gridColumn"></div>
+    <div class="gridColumn"></div>
+    <div class="gridColumn"></div>
+    <div class="gridColumn"></div>
+    <div class="gridColumn"></div>
+    <div class="gridColumn"></div>
+    <div class="gridColumn"></div>
+    <div class="gridColumn"></div>
+    <div class="gridColumn"></div>
+    <div class="gridColumn"></div>
+    <div class="gridColumn"></div>
+    <div class="gridColumn"></div>
+  </div>
+
+
+</body>
+
+</html>

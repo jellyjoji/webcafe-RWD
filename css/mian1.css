@@ -6,6 +6,14 @@
 
 /* 웹카페 반응형 스타일 */
 /* 공통 스타일 */
+body {
+  font-size: var(--text-sm);
+}
+
+/* 공통 아이콘 */
+.far {
+  margin-right: var(--spacing-xs);
+}
 
 /* 공통 헤더 */
 .appHeader {
@@ -112,97 +120,6 @@ fieldset {
   padding: var(--spacing-base) var(--spacing-lg);
 }
 
-/* 공통 메인 컨텐츠 제목 */
-.sprite {
-  /* background: sliver url(./../images/sprite_main.png); */
-}
-
-/* .book__title */
-.appMain [class*="__title"] {
-  /* background: orange url(./../images/sprite_main.png) no-repeat; */
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: center;
-  font-size: var(--text-md);
-  height: 120px;
-  padding-left: 4rem;
-  /* nowrap 상태일때 교차측 X 정렬이 됨  */
-  align-items: center;
-  /* nowrap 상태일때 여러줄 Y 정렬이 됨  */
-  align-content: center;
-}
-
-/* 속성선택자로 공통적인 요소 집어내서 찾기 */
-/* 클래스 모두 써기보다 __koTitle 가 들어간 클래서 분류하기 */
-/* 별표를 넣는건 koTtitle 포함된  모든 속성을 찾으라는 뜻 */
-.appMain [class*="__koTitle"] {
-  color: red;
-}
-
-.book__koTitle {
-  font-size: var(--text-md);
-  width: 100%;
-}
-
-.book__enTitle {
-  font-weight: 499;
-  font-size: var(--text-base);
-}
-
-.news__title {
-
-}
-.book__info{
-  text-align: center;
-}
-.book__infoRatingStar{
-  color: red;
-}
-dd{
-  width: 340px;
-}
-/* 새소식 */
-time{
-  /* display: block;
-  text-align: right; */
-  float: right;
-  background: #000;
-}
-/* video */
-.news{
-
-}
-/* ifram 자체를 부품화 시킴 */
-iframe{
-  width: 100%;
-  /* 자식요소의 크기만큼 부모가 늘어나는것이므로 */
-  /* height: auto; */
-  /* 부모크기를 읽어들이는 height: 100%;를 적용 */
-  height: 100%;
-  /* 비율 유지 */
-  /* 상위값을 크기를 따르므로 부모 크기 확인 */
-  /* 비율을 태그로 컴포넌트화 해서 태그만 추가해서 비율 저정가능하도록 */
-  aspect-ratio: 16/9;
-}
-.news__videoContainer{
-  max-width: 100%;
-  height: auto;
-}
-.iframeWrapper{
-  
-}
-/*  한 이미지 위치조정으로 여러 이미지 보이게하기 */
-.sprite {
-  background: orange url(./../images/sprite_main.png) no-repeat;
-}
-
-.spritenews {
-  background-position: 0 -230px;
-}
-.spriteboard {
-  background-position: 0 -330px;
-}
-
 /* 공통 추천 서적 */
 .book {
   background: yellow;
@@ -227,15 +144,137 @@ iframe{
 .twitter {
   background: blue;
 }
-/* book img */
-figure, dl{
-  text-align: center;
-}
-.star{
-  background-image: url(./../images/sprite_main.png);
-  position: 0 10px;
+
+
+/* 공통 메인 콘텐츠 */
+.appMain {
+  display: grid;
+  padding: var(--spacing-base) var(--spacing-lg);
 }
 
+/* 공통 메인 콘텐츠 제목 */
+.sprite {
+  background: url(./../images/sprite_main.png) no-repeat;
+  padding-left: 4.0625rem;
+  height: 3.75rem;
+}
+
+.spriteBook {
+  background-position: 0 0;
+}
+
+.spriteNews {
+  background-position: 0 -230px;
+}
+
+.spriteBoard {
+  background-position: 0 -115px;
+}
+
+.spriteFavorite {
+  background-position: 0 -345px;
+}
+
+.spriteTwitter {
+  background-position: 0 -460px;
+}
+
+.accentBook {
+  color: var(--accent-book);
+}
+
+.accentNews {
+  color: var(--accent-news);
+}
+
+.accentBoard {
+  color: var(--accent-board);
+}
+
+.accentFavorite {
+  color: var(--accent-favorite);
+}
+
+.accentTwitter {
+  color: var(--accent-twitter);
+}
+
+.appMain [class*="__title"] {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+}
+
+.appMain [class*="__koTitle"] {
+  font-size: var(--text-md);
+}
+
+.appMain [class*="__enTitle"] {
+  font-weight: 400;
+  font-size: var(--text-base);
+}
+
+.appMain [class*="__summary"] {
+  line-height: 1.5;
+  margin-top: var(--spacing-base);
+}
+
+/* 공통 추천서적 */
+.book__cover {
+  width: 60%;
+  text-align: center;
+  margin: var(--spacing-base) auto;
+}
+
+.book__coverCaption {
+  margin-top: var(--spacing-sm);
+}
+
+.book__info {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
+.ratingStar {
+  font-size: var(--text-lg);
+}
+
+/* 공통 새소식 */
+.news__videoContainer {
+  margin-top: var(--spacing-sm);
+}
+
+.iframeWrapper {
+  background: yellow;
+  aspect-ratio: 16 /9;
+}
+
+iframe {
+  width: 100%;
+  height: 100%;
+}
+
+.news__date {
+  display: block;
+  text-align: right;
+  margin-top: var(--spacing-sm);
+}
+
+/* 공통 게시판 */
+.board {
+  background: skyblue;
+}
+
+/* 공통 인기사이트 */
+.favorite {
+  background: salmon;
+}
+
+/* 공통 트위터 */
+.twitter {
+  background: yellowgreen;
+}
 
 /* 모바일 디바이스 */
 @media (min-width: 320px) and (max-width: 767px) {
@@ -347,6 +386,12 @@ figure, dl{
   .menu__item {
     border-bottom: 1px solid var(--black);
   }
+
+  /* 모바일 메인 콘텐츠 */
+  .appMain {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
 }
 
 /* 데스크탑 디바이스 */
@@ -403,19 +448,41 @@ figure, dl{
     text-shadow: 1px 1px 0 var(--black), -1px -1px 0 var(--black);
   }
 
-  /* 데스크탑 appMain */
+  /* 데스크탑 메인 콘텐츠 */
   .appMain {
-    padding: var(--spacing-base) var(--spacing-lg);
+    gap: var(--spacing-md);
+    max-width: var(--container-width);
+    margin-left: auto;
+    margin-right: auto;
     grid-template-columns: repeat(12, 1fr);
     /* 자동으로 늘어나기 때문에 행은 하나만 줘도 됨  */
     grid-template-rows: auto;
-    gap: var(--spacing-main);
+    grid-template-areas:
+      "news news news news news news news news news news news news "
+      "book book book book book twitter twitter twitter twitter favorite favorite favorite"
+      "book book book book book board board board board board board board";
   }
 
   .news {
+    grid-area: news;
+    height: 200px;
     /* 1번에서 시작하겠다  */
-    grid-row-start: 1;
-    grid-column-start: 1;
-    grid-column-end: 1;
+    /* grid-row-start : 1; */
+  }
+
+  .book {
+    grid-area: book;
+  }
+
+  .board {
+    grid-area: board;
+  }
+
+  .favorite {
+    grid-area: favorite;
+  }
+
+  .twitter {
+    grid-area: twitter;
   }
 }
