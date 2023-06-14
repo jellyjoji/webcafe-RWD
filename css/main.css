@@ -111,19 +111,31 @@ fieldset {
 }
 
 /* 공통 메인 콘텐츠 제목 */
-.book__title {
-  background: orange url(./../images/sprite_main.png) no-repeat;
+.sprite {
+  background: silver url(./../images/sprite_main.png) no-repeat;
+}
+
+.spriteBook {
+  background-position: 0 0;
+}
+
+.spriteNews {
+  background-position: 0 -230px;
+}
+
+.appMain [class*="__title"] {
   display: flex;
   flex-flow: column nowrap;
   height: 3.75rem;
   padding-left: 4.0625rem;
   justify-content: center;
 }
-.book__koTitle {
+
+.appMain [class*="__koTitle"] {
   font-size: var(--text-md);
 }
 
-.book__enTitle {
+.appMain [class*="__enTitle"] {
   font-weight: 400;
   font-size: var(--text-base);
 }
